@@ -1,0 +1,77 @@
+@use '/src/styles/vars' as *;
+
+.head {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 45px;
+  align-items: center;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+
+    .title {
+      color: $text;
+      font-weight: 700;
+      font-size: 5.6rem;
+      line-height: 7rem;
+      letter-spacing: -0.1rem;
+      cursor: default;
+
+      mark {
+        background-color: $yellow;
+        color: $background;
+        padding-inline: 0.2em;
+      }
+    }
+
+    .caption {
+      color: $textDark;
+      font-size: 2.2rem;
+      line-height: 3.8rem;
+      cursor: default;
+
+      mark {
+        display: inline-block;
+        color: $background;
+        padding-inline: 0.25em;
+        font-weight: 500;
+
+        &:nth-child(1) {
+          background-color: $cyan;
+        }
+
+        &:nth-child(2) {
+          background-color: $yellow;
+          transform: skew(-15deg, 0deg);
+        }
+
+        &:nth-child(3) {
+          background-color: $crimson;
+          color: white;
+          animation: pulse 2s infinite;
+
+          @keyframes pulse {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .socials {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 50px;
+    row-gap: 20px;
+    flex-shrink: 0;
+  }
+}

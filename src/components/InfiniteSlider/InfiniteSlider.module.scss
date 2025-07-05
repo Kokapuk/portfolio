@@ -1,0 +1,51 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  mask: linear-gradient(
+    90deg,
+    transparent 0,
+    black var(--shadowWidth),
+    black calc(100% - var(--shadowWidth)),
+    transparent 100%
+  );
+
+  .slider {
+    display: flex;
+    gap: var(--gap);
+    width: fit-content;
+    flex-shrink: 0;
+  }
+
+  &.left {
+    .slider {
+      animation: slideLeft infinite linear var(--duration);
+
+      @keyframes slideLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(-50% - (var(--gap) / 2)));
+        }
+      }
+    }
+  }
+
+  &.right {
+    justify-content: flex-end;
+
+    .slider {
+      animation: slideRight infinite linear var(--duration);
+
+      @keyframes slideRight {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(calc(50% + (var(--gap) / 2)));
+        }
+      }
+    }
+  }
+}

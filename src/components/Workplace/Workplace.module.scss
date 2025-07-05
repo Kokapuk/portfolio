@@ -1,0 +1,40 @@
+@use '/src/styles/vars' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+
+  .logo {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 3.3rem;
+    color: $text;
+  }
+
+  p.title {
+    cursor: default;
+  }
+
+  .workingPeriod {
+    font-weight: 400;
+    font-size: 14.4937px;
+    line-height: 150%;
+    color: $textDark;
+    margin-left: auto;
+    cursor: default;
+  }
+}
+
+.caption {
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: $textDarker;
+  cursor: default;
+}

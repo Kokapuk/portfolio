@@ -1,0 +1,57 @@
+@use './vars' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  font-family: 'Poppins', sans-serif;
+  scrollbar-color: $textDark transparent;
+  scrollbar-width: thin;
+}
+
+:root {
+  color-scheme: dark;
+  background-color: $background;
+  font-size: 62.5%;
+}
+
+::selection {
+  background-color: rgba(44, 204, 195, 0.75);
+  color: $background;
+}
+
+button {
+  cursor: pointer;
+}
+
+a[data-customunderline] {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  transition: 300ms color;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: $yellow;
+    width: 0;
+    transition: 300ms width;
+  }
+
+  &:hover {
+    color: $yellow !important;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}

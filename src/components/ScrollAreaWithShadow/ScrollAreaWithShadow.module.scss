@@ -1,0 +1,34 @@
+.scrollArea {
+  overflow: auto;
+
+  $startShadow: transparent 0, black var(--shadowSize);
+  $endShadow: black calc(100% - var(--shadowSize)), transparent 100%;
+
+  &.vertical {
+    &.startShadow {
+      mask: linear-gradient(180deg, $startShadow);
+    }
+
+    &.endShadow {
+      mask: linear-gradient(180deg, $endShadow);
+    }
+
+    &.startShadow.endShadow {
+      mask: linear-gradient(180deg, $startShadow, $endShadow);
+    }
+  }
+
+  &.horizontal {
+    &.startShadow {
+      mask: linear-gradient(90deg, $startShadow);
+    }
+
+    &.endShadow {
+      mask: linear-gradient(90deg, $endShadow);
+    }
+
+    &.startShadow.endShadow {
+      mask: linear-gradient(90deg, $startShadow, $endShadow);
+    }
+  }
+}

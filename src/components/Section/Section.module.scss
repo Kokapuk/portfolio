@@ -1,0 +1,31 @@
+@use '/src/styles/vars' as *;
+
+.section {
+  width: 100%;
+  margin-inline: auto;
+
+  &.default {
+    max-width: 1000px;
+  }
+
+  &.thin {
+    max-width: 800px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 4.8rem;
+  color: $textDarker;
+  margin-bottom: 0.2em;
+  text-align: center;
+  cursor: default;
+}
+
+.caption {
+  font-size: 3.2rem;
+  color: $textDark;
+  text-align: center;
+  margin-bottom: 100px;
+  cursor: default;
+}

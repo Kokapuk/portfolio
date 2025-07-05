@@ -1,0 +1,17 @@
+@use '/src/styles/vars' as *;
+
+.list {
+  display: flex;
+  gap: 50px;
+
+  li::marker {
+    content: none;
+  }
+}
+
+.link {
+  font-weight: 500;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
+  color: $textDark;
+}
