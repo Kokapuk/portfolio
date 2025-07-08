@@ -5,6 +5,7 @@ import Hero from '@sections/Hero';
 import Projects from '@sections/Projects';
 import TechStack from '@sections/TechStack';
 import type { JSX } from 'react';
+import styles from './App.module.scss';
 
 export interface NavSection {
   id: string;
@@ -16,14 +17,14 @@ const SECTIONS: NavSection[] = [
   { id: 'hero', label: 'Contacts', Component: Hero },
   { id: 'tech-stack', label: 'Tech Stack', Component: TechStack },
   { id: 'experience', label: 'Experience', Component: Experience },
-  { id: 'Projects', label: 'Projects', Component: Projects },
+  { id: 'projects', label: 'Projects', Component: Projects },
 ];
 
 const App = () => {
   return (
     <>
       <Header navSections={SECTIONS} />
-      <main style={{ paddingBlock: '150px', display: 'flex', flexDirection: 'column', gap: 200 }}>
+      <main className={styles.main}>
         {SECTIONS.map((section) => (
           <section.Component key={section.id} id={section.id} />
         ))}

@@ -1,11 +1,13 @@
+import cn from 'classnames';
 import type { NavSection } from '../../App';
 import styles from './Navigation.module.scss';
 
 export interface NavigationProps {
   navSections: NavSection[];
+  orientation: 'horizontal' | 'vertical';
 }
 
-const Navigation = ({ navSections }: NavigationProps) => {
+const Navigation = ({ navSections, orientation }: NavigationProps) => {
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const anchorHrefHash = new URL(event.currentTarget.href).hash;
 
@@ -31,7 +33,7 @@ const Navigation = ({ navSections }: NavigationProps) => {
 
   return (
     <nav>
-      <ul className={styles.list}>
+      <ul className={cn(styles.list, styles[orientation])}>
         {navSections.map((section) => (
           <li key={section.id}>
             <a className={styles.link} href={`#${section.id}`} onClick={handleLinkClick} data-customunderline>

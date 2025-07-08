@@ -1,24 +1,43 @@
 @use '/src/styles/vars' as *;
+@use '/src/styles/mixins' as *;
 
 .head {
   display: flex;
-  gap: 100px;
+  gap: 50px;
   margin-bottom: 45px;
   align-items: center;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 100px;
+  }
 
   .column {
     display: flex;
-    flex-direction: column;
     gap: 30px;
     justify-content: center;
+    flex-direction: column;
+
+    @include largeTablet {
+      align-items: center;
+    }
+
+    @include smallTablet {
+      align-items: center;
+    }
 
     .title {
       color: $text;
       font-weight: 700;
       font-size: 5.6rem;
-      line-height: 7rem;
+      line-height: 1.25em;
       letter-spacing: -0.1rem;
       cursor: default;
+
+      @include phone {
+        font-size: 4.6rem;
+      }
 
       mark {
         background-color: $yellow;
@@ -39,16 +58,16 @@
         padding-inline: 0.25em;
         font-weight: 500;
 
-        &:nth-child(1) {
+        &:nth-of-type(1) {
           background-color: $cyan;
         }
 
-        &:nth-child(2) {
+        &:nth-of-type(2) {
           background-color: $yellow;
           transform: skew(-15deg, 0deg);
         }
 
-        &:nth-child(3) {
+        &:nth-of-type(3) {
           background-color: $crimson;
           color: white;
           animation: pulse 2s infinite;
@@ -73,5 +92,11 @@
     column-gap: 50px;
     row-gap: 20px;
     flex-shrink: 0;
+
+    .link {
+      @include phone {
+        font-size: 1rem;
+      }
+    }
   }
 }

@@ -1,0 +1,19 @@
+@use '/src/styles/vars' as *;
+
+.button {
+  display: block;
+  font-size: 22px;
+  background-color: transparent;
+  width: 45px;
+  border: none;
+  display: grid;
+  place-content: center;
+  align-self: stretch;
+  margin-left: 30px;
+  color: $text;
+
+  svg {
+    height: 1em;
+    width: auto;
+  }
+}

@@ -1,3 +1,5 @@
+@use '/src/styles/mixins' as *;
+
 // .grid {
 //   display: grid;
 //   grid-template-columns: repeat(6, auto);
@@ -9,6 +11,10 @@
   display: flex;
   flex-direction: column;
   gap: 75px;
+
+  @include phone {
+    gap: 40px;
+  }
 }
 
 .iconContainer {
@@ -16,6 +22,12 @@
   width: 120px;
   height: 120px;
   flex-shrink: 0;
+
+  @include phone {
+    width: 50px;
+    height: 50px;
+    
+  }
 
   svg {
     width: 100%;

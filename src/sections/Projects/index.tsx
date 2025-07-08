@@ -25,9 +25,9 @@ const PROJECTS: ProjectProps[] = [
     caption:
       'React animation library for entering, exiting, and updating elements without much effort. React Smooth Flow is designed to simplify complex animations while providing control over transition behavior, making it suitable for any React project, from small components to large SPAs',
     technologies: [
-      { icon: <React />, href: 'https://react.dev' },
-      { icon: <TypeScript />, href: 'https://www.typescriptlang.org' },
-      { icon: <Vite />, href: 'https://vite.dev' },
+      { icon: <React />, label: 'React', href: 'https://react.dev' },
+      { icon: <TypeScript />, label: 'TypeScript', href: 'https://www.typescriptlang.org' },
+      { icon: <Vite />, label: 'Vite', href: 'https://vite.dev' },
     ],
     actions: [
       {
@@ -39,21 +39,21 @@ const PROJECTS: ProjectProps[] = [
     ],
   },
   {
-    bannerLogo: <img src={PasswordManager} loading="lazy" />,
+    bannerLogo: <img src={PasswordManager} loading="lazy" alt="" />,
     title: 'Password Manager',
     caption:
       'Secure and intuitive password manager for credential storage and access. Built with modern web technologies, this application simplifies the way users manage their passwords — from adding and organizing entries to securely accessing them when needed',
     technologies: [
-      { icon: <React />, href: 'https://react.dev' },
-      { icon: <TypeScript />, href: 'https://www.typescriptlang.org' },
-      { icon: <NextJS />, href: 'https://nextjs.org' },
-      { icon: <SASS />, href: 'https://sass-lang.com' },
-      { icon: <Zustand />, href: 'https://zustand-demo.pmnd.rs' },
-      { icon: <RSF />, href: 'https://www.npmjs.com/package/react-smooth-flow' },
-      { icon: <NodeJS />, href: 'https://nodejs.org' },
-      { icon: <Electron />, href: 'https://www.electronjs.org' },
-      { icon: <Express style={{ background: 'white', padding: '3px' }} />, href: 'https://expressjs.com' },
-      { icon: <MongoDb />, href: 'https://www.mongodb.com' },
+      { icon: <React />, label: 'React', href: 'https://react.dev' },
+      { icon: <TypeScript />, label: 'TypeScript', href: 'https://www.typescriptlang.org' },
+      { icon: <NextJS />, label: 'Next.js', href: 'https://nextjs.org' },
+      { icon: <SASS />, label: 'SASS/SCSS', href: 'https://sass-lang.com' },
+      { icon: <Zustand />, label: 'Zustand', href: 'https://zustand-demo.pmnd.rs' },
+      { icon: <RSF />, label: 'React Smooth Flow', href: 'https://www.npmjs.com/package/react-smooth-flow' },
+      { icon: <NodeJS />, label: 'Node.js', href: 'https://nodejs.org' },
+      { icon: <Electron />, label: 'Electron', href: 'https://www.electronjs.org' },
+      { icon: <Express style={{ background: 'white', padding: '3px' }} />, label: 'Express', href: 'https://expressjs.com' },
+      { icon: <MongoDb />, label: 'MongoDB', href: 'https://www.mongodb.com' },
     ],
     actions: [
       {

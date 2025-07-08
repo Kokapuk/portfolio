@@ -1,0 +1,9 @@
+@use '/src/styles/vars' as *;
+
+.wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: $background;
+  border-top: 1px solid $backgroundLight;
+  padding: 25px;
+}

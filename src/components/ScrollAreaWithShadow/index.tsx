@@ -16,6 +16,7 @@ export interface ScrollAreaWithShadowProps {
   className?: string;
   style?: CSSProperties;
   children: ReactNode;
+  tabIndex?: number;
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -25,6 +26,7 @@ const ScrollAreaWithShadow = ({
   className,
   style,
   children,
+  tabIndex,
   ref,
 }: ScrollAreaWithShadowProps) => {
   const [scrolledToStart, setScrolledToStart] = useState(false);
@@ -44,7 +46,10 @@ const ScrollAreaWithShadow = ({
         if (localScrollArea.scrollTop === 0) {
           setScrolledToStart(true);
           setScrolledToEnd(false);
-        } else if (localScrollArea.scrollTop + localScrollArea.clientHeight === localScrollArea.scrollHeight) {
+        } else if (
+          Math.ceil(localScrollArea.scrollTop + localScrollArea.getBoundingClientRect().height) >=
+          localScrollArea.scrollHeight
+        ) {
           setScrolledToStart(false);
           setScrolledToEnd(true);
         } else {
@@ -83,6 +88,7 @@ const ScrollAreaWithShadow = ({
         !scrolledToEnd && styles.endShadow,
         className
       )}
+      tabIndex={tabIndex}
       style={{ '--shadowSize': shadowSize, ...style } as CSSProperties}
     >
       {children}

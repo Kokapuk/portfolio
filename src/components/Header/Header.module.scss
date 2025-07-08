@@ -1,4 +1,5 @@
 @use '/src/styles/vars' as *;
+@use '/src/styles/mixins' as *;
 
 .header {
   position: sticky;
@@ -8,11 +9,39 @@
   z-index: 10;
   backdrop-filter: blur(15px);
   background-color: color-mix(in srgb, $background 85%, transparent 15%);
+
+  @include phone {
+    padding-block: 25px;
+  }
 }
 
 .inner {
-  width: 1000px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-inline: auto;
+  display: flex;
+  align-items: center;
+
+  @include phone {
+    padding-inline: 25px;
+    justify-content: flex-end;
+  }
+
+  .navigation {
+    @include phone {
+      display: none;
+    }
+  }
+
+  .downloadCVButton {
+    margin-left: 50px;
+  }
+
+  .menuButton {
+    display: none;
+
+    @include phone {
+      display: block;
+    }
+  }
 }

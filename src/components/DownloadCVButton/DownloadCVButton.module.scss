@@ -1,0 +1,21 @@
+@use '/src/styles/vars' as *;
+
+.button {
+  border-radius: 12px;
+  border: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+  color: $yellow;
+  background-color: transparent;
+  border: 2px solid $yellow;
+  transition-duration: 300ms;
+  transition-property: background-color, color;
+
+  &:hover {
+    background: $yellow;
+    color: $background;
+  }
+}

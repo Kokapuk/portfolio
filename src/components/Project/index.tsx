@@ -48,7 +48,7 @@ const Project = ({
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
 
-        <ScrollAreaWithShadow className={styles.caption} shadowSize="50px" orientation="vertical">
+        <ScrollAreaWithShadow className={styles.caption} shadowSize="50px" orientation="vertical" tabIndex={0}>
           {caption}
         </ScrollAreaWithShadow>
 
@@ -59,7 +59,7 @@ const Project = ({
           shadowSize="75px"
         >
           {technologies.map((technology) => (
-            <a key={technology.href} href={technology.href} target="_blank">
+            <a key={technology.href} href={technology.href} target="_blank" title={technology.label}>
               {technology.icon}
             </a>
           ))}

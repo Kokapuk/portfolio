@@ -13,12 +13,12 @@ const Hero = (props: SectionIdProps) => {
             My name is <mark>Yaroslav</mark>
           </h1>
           <p className={styles.caption}>
-            I'm a web developer who enjoys building <mark>clean</mark>, <mark>efficient</mark>, and{' '}
-            <mark>engaging</mark> user interfaces
+            I'm a web developer with <b>2+</b> years of commercial experience who enjoys building <mark>clean</mark>,{' '}
+            <mark>efficient</mark>, and <mark>engaging</mark> user interfaces
           </p>
         </div>
 
-        <Socials wrapperClass={styles.socials} />
+        <Socials wrapperClass={styles.socials} linkClass={styles.link} />
       </div>
     </Section>
   );

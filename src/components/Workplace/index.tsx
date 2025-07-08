@@ -15,7 +15,7 @@ const Workplace = ({ href, logoUrl, title, workingPeriod, caption }: WorkplacePr
   return (
     <div>
       <div className={styles.header}>
-        <img src={logoUrl} className={styles.logo} loading="lazy" />
+        <img src={logoUrl} className={styles.logo} loading="lazy" alt="" />
 
         {href ? (
           <a className={styles.title} href={href} data-customunderline target="_blank">

@@ -1,0 +1,13 @@
+@use '/src/styles/mixins' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding-block: 150px;
+
+  @include phone {
+    padding-block: 50px;
+    gap: 75px;
+  }
+}
