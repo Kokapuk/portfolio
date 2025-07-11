@@ -22,7 +22,7 @@ const SocketIO = lazy(() => import('@assets/SocketIO'));
 const TypeScript = lazy(() => import('@assets/TypeScript'));
 const Zustand = lazy(() => import('@assets/Zustand'));
 const Vite = lazy(() => import('@assets/Vite'));
-const Vue = lazy(() => import('@assets/Vue'));
+const Jest = lazy(() => import('@assets/Jest'));
 
 export interface Technology {
   icon: ReactNode;
@@ -39,7 +39,7 @@ const TECH_STACK: Technology[] = [
   { icon: <React />, label: 'React', href: 'https://react.dev' },
   { icon: <NextJS />, label: 'Next.js', href: 'https://nextjs.org' },
   { icon: <Zustand />, label: 'Zustand', href: 'https://zustand-demo.pmnd.rs' },
-  { icon: <Vue />, label: 'Vue.js', href: 'https://vuejs.org/' },
+  { icon: <Jest />, label: 'Jest', href: 'https://jestjs.io' },
   { icon: <Git />, label: 'Git', href: 'https://git-scm.com' },
   { icon: <NodeJS />, label: 'Node.js', href: 'https://nodejs.org' },
   { icon: <Electron />, label: 'Electron', href: 'https://www.electronjs.org' },
@@ -69,24 +69,14 @@ const TechStack = (props: SectionIdProps) => {
       <div className={styles.wrapper}>
         <InfiniteSlider gap={gap} direction="left" duration="20s" shadowWidth={gap}>
           {TECH_STACK.slice(0, Math.floor(TECH_STACK.length / 2)).map((technology) => (
-            <a
-              key={technology.href}
-              className={styles.iconContainer}
-              href={technology.href}
-              title={technology.label}
-            >
+            <a key={technology.href} className={styles.iconContainer} href={technology.href} title={technology.label}>
               <Suspense>{technology.icon}</Suspense>
             </a>
           ))}
         </InfiniteSlider>
         <InfiniteSlider gap={gap} direction="right" duration="20s" shadowWidth={gap}>
           {TECH_STACK.slice(Math.floor(TECH_STACK.length / 2), undefined).map((technology) => (
-            <a
-              key={technology.href}
-              className={styles.iconContainer}
-              href={technology.href}
-              title={technology.label}
-            >
+            <a key={technology.href} className={styles.iconContainer} href={technology.href} title={technology.label}>
               <Suspense>{technology.icon}</Suspense>
             </a>
           ))}

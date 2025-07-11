@@ -9,7 +9,7 @@ export interface DownloadCVButtonProps {
 
 const DownloadCVButton = ({ className, style }: DownloadCVButtonProps) => {
   return (
-    <a href="/CV_Yaroslav_Pavlov_Frontend_Developer.pdf" className={cn(styles.button, className)} style={style} target="_blank">
+    <a href="/CV_Yaroslav_Pavlov_Frontend.pdf" className={cn(styles.button, className)} style={style} target="_blank">
       Download CV
     </a>
   );
